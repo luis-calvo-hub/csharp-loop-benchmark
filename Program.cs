@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 public class Program {
-    private static int[] collection = new int[100000000];
+    private static int[] collection = new int[500000000];
 
     static void Main(string[] args) {
         Benchmark(BenchmarkFor);
@@ -16,7 +16,7 @@ public class Program {
         sw.Start();
         action.Invoke();
         sw.Stop();
-        Console.WriteLine($"{sw.Elapsed.Milliseconds} Milliseconds has passed on: {action.Method.Name}");
+        Console.WriteLine($"{sw.Elapsed.TotalMilliseconds} Milliseconds has passed on: {action.Method.Name}");
     }
 
     private static void BenchmarkFor() {
