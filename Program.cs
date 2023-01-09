@@ -7,6 +7,8 @@ public class Program {
         Benchmark(BenchmarkFor);
         Benchmark(BenchmarkForCacheLength);
         Benchmark(BenchmarkForeach);
+        Benchmark(BenchmarkWhile);
+        Benchmark(BenchmarkWhileCacheLength);
         Benchmark(BenchmarkDoWhile);
         Benchmark(BenchmarkDoWhileCacheLength);
     }
@@ -34,6 +36,23 @@ public class Program {
     private static void BenchmarkForeach() {
         foreach(int i in collection) {
             _ = collection[i];
+        }
+    }
+
+    private static void BenchmarkWhile() {
+        int i = 0;
+        while(i < collection.Length){
+            _ = collection[i];
+            i++;
+        }
+    }
+
+    private static void BenchmarkWhileCacheLength() {
+        int i = 0;
+        int length = collection.Length;
+        while(i < length){
+            _ = collection[i];
+            i++;
         }
     }
 
