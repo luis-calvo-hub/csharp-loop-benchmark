@@ -1,18 +1,18 @@
 # csharp-loop-benchmark
 Public project for testing C# performance for loops
 
-Benchmark results log with the processor AMD Ryzen 7 4800H
+Benchmark test results log with the processor AMD Ryzen 7 4800H
 
-Benchmarking: 0.236(s) - For
+Benchmarking: 2.299s -> For
 
-Benchmarking: 0.210(s) - ForWithCache
+Benchmarking: 2.86s -> ForWithCache
 
-Benchmarking: 0.310(s) - Foreach
+Benchmarking: 3.79s -> Foreach
 
-Benchmarking: 0.245(s) - While
+Benchmarking: 2.457s -> While
 
-Benchmarking: 0.247(s) - WhileWithCache
+Benchmarking: 2.441s -> WhileWithCache
 
-Benchmarking: 0.247(s) - DoWhile
+Benchmarking: 2.460s -> DoWhile
 
-Benchmarking: 0.246(s) - DoWhileWithCache4
+Benchmarking: 2.444s -> DoWhileWithCache
