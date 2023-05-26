@@ -7,7 +7,7 @@ public class Program {
 }
 
 public class Benchmarker {
-    private static int[] collection = new int[0];
+    private int[] collection = new int[0];
 
     public Benchmarker(int operations) {
         collection = new int[operations];
@@ -21,7 +21,7 @@ public class Benchmarker {
         Benchmark(DoWhileWithCache);
     }
 
-    private static void Benchmark(Action action) {
+    private void Benchmark(Action action) {
         Stopwatch sw = new();
         sw.Start();
         action.Invoke();
@@ -29,25 +29,25 @@ public class Benchmarker {
         Console.WriteLine($"Benchmarking: {sw.Elapsed.Seconds}.{sw.Elapsed.Milliseconds}s -> {action.Method.Name}");
     }
 
-    private static void For() {
+    private void For() {
         for(int i = 0; i < collection.Length; i++) {
             _ = i;
         }
     }
 
-    private static void ForWithCache() {
+    private void ForWithCache() {
         for(int i = 0, n = collection.Length; i < n; i++) {
             _ = i;
         }
     }
 
-    private static void Foreach() {
+    private void Foreach() {
         foreach(int i in collection) {
             _ = collection[i];
         }
     }
 
-    private static void While() {
+    private void While() {
         int i = 0;
         while(i < collection.Length){
             _ = collection[i];
@@ -55,7 +55,7 @@ public class Benchmarker {
         }
     }
 
-    private static void WhileWithCache() {
+    private void WhileWithCache() {
         int i = 0;
         int length = collection.Length;
         while(i < length){
@@ -64,7 +64,7 @@ public class Benchmarker {
         }
     }
 
-    private static void DoWhile() {
+    private void DoWhile() {
         int i = 0;
         do {
             _ = collection[i];
@@ -73,7 +73,7 @@ public class Benchmarker {
         while(i < collection.Length);
     }
 
-    private static void DoWhileWithCache() {
+    private void DoWhileWithCache() {
         int i = 0;
         int length = collection.Length;
         do {
